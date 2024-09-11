@@ -38275,7 +38275,7 @@ try {
               type: "TextBlock",
               size: "medium",
               weight: "bolder",
-              text: `🚀 New ${notificationType} published`,
+              text: `🚀 New ${applicationName} update available (${version})`,
               style: "heading",
               wrap: true,
             },
