@@ -1,0 +1,19 @@
+{
+  "name": "ms-teams-releases-bot",
+  "version": "1.0.0",
+  "description": "Bot to notify softaware releases to Microsoft Teams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:OnalabsInnoHub/ms-teams-releases-bot.git"
+  },
+  "keywords": [],
+  "author": "Albert Álvarez Carulla",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0"
+  }
+}

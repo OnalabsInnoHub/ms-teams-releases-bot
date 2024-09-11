@@ -1,0 +1,39 @@
+name: "Microsoft Teams Releases Bot"
+description: "Bot to notify softaware releases to Microsoft Teams"
+
+inputs:
+  webhook:
+    description: "Webhook URL of the MS Teams channel."
+    required: true
+  tag-or-release:
+    type: choice
+    description: 'Indicates if the is a release or tag notification.'
+    required: true
+    options:
+      - "tag"
+      - "release"
+    default: "tag"
+  release-notes:
+    description: "Release notes for the version."
+    required: false
+    default: "No release notes provided."
+  version:
+    description: "Version of the release."
+    required: true
+  environment:
+    type: choice
+    description: "Environment where the release is being deployed."
+    required: true
+    options:
+      - "development"
+      - "production"
+  action-url:
+    description: "URL to the version that triggered the release."
+    required: true
+  application-name:
+    description: "Name of the application being released."
+    required: true
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
