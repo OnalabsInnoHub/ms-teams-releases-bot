@@ -1,17 +1,14 @@
 name: "Microsoft Teams Releases Bot"
 description: "Bot to notify softaware releases to Microsoft Teams"
+author: "Albert Álvarez Carulla"
 
 inputs:
   webhook:
     description: "Webhook URL of the MS Teams channel."
     required: true
   tag-or-release:
-    type: choice
-    description: 'Indicates if the is a release or tag notification.'
+    description: 'Indicates if the is a release or tag notification. Options: tag, release.'
     required: true
-    options:
-      - "tag"
-      - "release"
     default: "tag"
   release-notes:
     description: "Release notes for the version."
@@ -21,12 +18,8 @@ inputs:
     description: "Version of the release."
     required: true
   environment:
-    type: choice
-    description: "Environment where the release is being deployed."
+    description: "Environment where the release is being deployed. Options: development, production."
     required: true
-    options:
-      - "development"
-      - "production"
   action-url:
     description: "URL to the version that triggered the release."
     required: true
