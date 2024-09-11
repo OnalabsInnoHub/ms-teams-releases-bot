@@ -62,6 +62,12 @@ try {
             },
             {
               type: "TextBlock",
+              weight: "bolder",
+              text: `Release notes`,
+              wrap: true,
+            },
+            {
+              type: "TextBlock",
               text: releaseNotes,
               wrap: true,
             },
